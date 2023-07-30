@@ -1,0 +1,31 @@
+Per leggere un indirizzo IP in modalità classless utilizzando la subnet mask, segui questi passaggi:
+
+1. Scrivi l'indirizzo IP in notazione decimale puntata (es. 192.168.1.10).
+2. Scrivi la subnet mask in notazione decimale puntata (es. 255.255.255.0).
+
+Per calcolare la suddivisione fra net id e host id, esegui l'operazione logica AND tra l'indirizzo IP e la subnet mask. Il risultato rappresenta il Net ID, mentre il resto dell'indirizzo IP rappresenta l'Host ID.
+
+Ecco un esempio:
+
+Supponiamo di avere l'indirizzo IP 192.168.1.10 con subnet mask 255.255.255.0:
+
+1. Trasformiamo l'indirizzo IP e la subnet mask in binario:
+   Indirizzo IP: 11000000.10101000.00000001.00001010
+   Subnet Mask: 11111111.11111111.11111111.00000000
+
+2. Eseguiamo l'operazione logica AND tra l'indirizzo IP e la subnet mask:
+   11000000.10101000.00000001.00001010 (IP)
+&  11111111.11111111.11111111.00000000 (Subnet Mask)
+----------------------------------------
+   11000000.10101000.00000001.00000000 (Net ID)
+
+Quindi, il Net ID dell'indirizzo IP 192.168.1.10 con subnet mask 255.255.255.0 è 192.168.1.0, mentre l'Host ID è 0.0.0.10.
+
+Per l'animazione che mette in evidenza questa suddivisione fra Net ID e Host ID, posso descriverti il concetto generale, ma non posso creare direttamente l'animazione tramite codice poiché questa piattaforma supporta solo testo.
+
+1. Crea una rappresentazione grafica dell'indirizzo IP e della subnet mask divisi in quattro ottetti.
+2. Esegui l'operazione logica AND tra ogni ottetto dell'indirizzo IP e della subnet mask.
+3. Mostra visivamente i risultati di ogni operazione di AND in un colore diverso per rappresentare il Net ID.
+4. Utilizza un altro colore per rappresentare l'Host ID.
+
+Se hai delle specifiche domande riguardo al codice o alla creazione dell'animazione con JavaScript e jQuery, sarò felice di aiutarti!
