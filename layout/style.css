@@ -140,3 +140,10 @@ span, p{
   z-index: 1; /* Imposta un valore di z-index più alto per farlo sovrapporre all'immagine della barra */
 }
 
+#binary-result, #binary-result2 {
+  color: red;
+}
+
+#subnet-result, #subnet-result2 {
+  color: green;
+}

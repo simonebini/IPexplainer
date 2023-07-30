@@ -11,6 +11,8 @@ $(document).ready(function(){
 
   $("form").submit(function(event) {
 
+    event.preventDefault(); // impedisci il comportamento di default del form
+
     var ipValue = $("#ip-input").val();
     var subnetValue = $("#subnet-input").val();
     convertToBinary(ipValue, "binary-result"); // chiamo la funzione convertToBinary
