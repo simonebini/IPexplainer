@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="layout/style.css">
+    <script src="layout/jquery-3.6.4.min.js"></script>
+    <script src="layout/script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="back">
+        <video id="background-video" loop muted autoplay>
+          <source src="source/clip.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <form action="#ricevi.html" method="get">
+
+        <div id="ip-container">
+          <div class="input-container">
+            <input id="ip-input" type="text" placeholder="Inserisci un indirizzo IP" oninput="checkFields()">
+          </div>
+        </div>
+
+        <div id="subnet-container" style="display: none;">
+          <div class="input-container">
+            <input id="subnet-input" type="text" placeholder="Inserisci la Subnet" oninput="checkFields()">
+          </div>
+        </div>
+
+        <div>
+          <input type="submit" name='invia' id="send" value="Submit" disabled>
+        </div>
+
+      </form>
+
+      <div id="next">
+        <img id="promt" src="/source/promt.png" alt="promt">
+        <p id="ip">Indirizzo IP: <span id="binary-result"></span></p>
+        <p id="subnet">Indirizzo Subnet Mask: <span id="subnet-result"></span></p>
+        <p id="and">Applico la messa in AND</p>
+        <br><br>
+        <p id="ip">&nbsp&nbsp&nbsp<span id="binary-result2">(IP)</span></p>
+        <p id="subnet">& <span id="subnet-result2">(Subnet)</span></p>
+        <p id="ip2">---------------------------------------------------------</p>
+        <p id="network">&nbsp&nbsp&nbsp&nbsp&nbsp<span id="and-result"></span></p>
+        <p id="hostbinary">Host ID: <span id="host-id"></span></p>
+        
+      </div>
+
+      <div id="bar">
+        <img id="barra" src="/source/downbar1.png" alt="bar">
+      </div>
+
+    </div>
+
+  </body>
+</html>
