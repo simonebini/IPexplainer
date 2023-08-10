@@ -57,20 +57,14 @@ input#ip-input, #subnet-input {
 
 img{
   margin-top: 400px;
-  width: 1300px;
 }
 
 span, p{
   color: white;
 }
 
-#barra {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1700px;
-  z-index: 0; /* Imposta un valore di z-index inferiore per l'immagine della barra */
+map{
+  cursor: pointer;
 }
 
 /*--------------------------------------*/

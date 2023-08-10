@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <link href="source/icon.png" rel="icon" media="all">
     <link rel="stylesheet" type="text/css" href="layout/style.css">
     <script src="layout/jquery-3.6.4.min.js"></script>
     <script src="layout/script.js"></script>
@@ -36,7 +37,12 @@
       </form>
 
       <div id="next">
-        <img id="promt" src="source/promt.png" alt="promt">
+        <img id="promt" src="source/promt2.png" alt="promt" usemap="#workmap">
+        <map name="workmap">
+          <area shape="circle" coords="29,35,9" alt="Exit" href="index.html">
+          <area id="reduce" shape="circle" coords="56,33,9" alt="Reduce" onclick="reduce()">
+          <area shape="circle" coords="84,33,8" alt="Full" href="https://youtu.be/r5jwhzOdwmg">
+        </map>
         <p id="ip">Indirizzo IP: <span id="binary-result"></span></p>
         <p id="subnet">Indirizzo Subnet Mask: <span id="subnet-result"></span></p>
         <p id="and">Applico la messa in AND</p>
@@ -46,10 +52,6 @@
         <p id="ip2">---------------------------------------------------------</p>
         <p id="network">&nbsp&nbsp&nbsp&nbsp&nbsp<span id="and-result"></span></p>
         <p id="hostbinary">Host ID: <span id="host-id"></span></p>
-      </div>
-
-      <div id="bar">
-        <img id="barra" src="source/downbar1.png" alt="bar">
       </div>
 
     </div>

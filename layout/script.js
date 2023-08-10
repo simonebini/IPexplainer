@@ -1,12 +1,10 @@
-
 $(document).ready(function(){
   $("#next").hide();
   
   $("#send").on("click", function() {
     $("form").hide(); // Nascondi il form
-    $(".back").hide(); // Nascondi l'elemento con la classe "back"
-    $("#next").show(); // Mostra l'elemento con l'id "next"
-    $("#barra").attr("src", "/source/downbar2.png"); // Cambia l'immagine della barra
+    $(".back").hide(); // Nascondi l'icona'
+    $("#next").show(); // Mostro il promt
   });
 
   $("form").submit(function(event) {
@@ -50,7 +48,7 @@ function validateIP() {
 
 function validateSubnet() {
   var subnetInput = $("#subnet-input");
-  var subnet = subnetInput.val().trim(); // Rimuovi gli spazi bianchi all'inizio e alla fine
+  var subnet = subnetInput.val().trim(); // rimuove gli spazi bianchi all'inizio e alla fine per evitare che l'utente inserisca uno spazio bianco prima o dopo l'indirizzo IP
 
   // Controllo se la subnet è valida
   var subnetRegular = /^(255\.(255|254|252|248|240|224|192|128|0)\.0\.0|255\.255\.(255|254|252|248|240|224|192|128|0)\.0|255\.255\.255\.(255|254|252|248|240|224|192|128|0)|\d{1,3}\.\d{1,3}\.\d{1,3}\.0|\d{1,3}\.\d{1,3}\.0\.0|\d{1,3}\.0\.0\.0|0\.0\.0\.0)$/;
@@ -68,10 +66,10 @@ function validateSubnet() {
 
 function checkFields() {
   if (validateIP() && validateSubnet()) {
-    $("#send").prop("disabled", false); // Rimuovi l'attributo disabled per abilitare il pulsante
+    $("#send").prop("disabled", false);
     $("#send").css("cursor", "pointer");
   } else {
-    $("#send").prop("disabled", true); // Aggiungi l'attributo disabled per disabilitare il pulsante
+    $("#send").prop("disabled", true);
     $("#send").css("cursor", "not-allowed", "background-color", "white");
   }
 }
@@ -129,4 +127,10 @@ function getHost(ipAddress, subnetMask) {
   var binaryHostId = hostIdOctets.join(".");
 
   return binaryHostId;
+}
+
+function reduce() {
+  $("form").show(); // Mostro il form
+  $(".back").show(); // Mostro l'icona'
+  $("#next").hide(); // Nascondo il promt
 }
