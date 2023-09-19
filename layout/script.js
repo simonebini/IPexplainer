@@ -75,15 +75,15 @@ function checkFields() {
 }
 
 function convertToBinary(value, targetId) {
-  // Split the IP address or subnet into four octets
+  // divido l'ip in ottetti
   var octets = value.split(".");
 
-  // Convert each octet to binary and join with a dot
+  // converto ogni ottetto in binario
   var binary = octets.map(function(octet) {
     return parseInt(octet, 10).toString(2).padStart(8, "0");
   }).join(".");
 
-  // Show the result in the text box
+  // output
   $("#" + targetId).text(binary);
 }
 
@@ -131,6 +131,6 @@ function getHost(ipAddress, subnetMask) {
 
 function reduce() {
   $("form").show(); // Mostro il form
-  $(".back").show(); // Mostro l'icona'
   $("#next").hide(); // Nascondo il promt
+  $(".back").show(); // Mostro l'icona'
 }

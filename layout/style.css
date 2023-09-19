@@ -141,3 +141,10 @@ map{
 #subnet-result, #subnet-result2 {
   color: green;
 }
+
+@media (max-width: 600px) {
+  #promt{
+    max-width: 100%;
+    height: auto;
+  }
+}
